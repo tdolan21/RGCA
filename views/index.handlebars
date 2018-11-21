@@ -2,7 +2,7 @@
       <div class="row">
         <div class="col-sm-12">
         <nav class="navbar navbar-dark" style="background-color: #283747">
-          <a class="navbar-brand" href="games.html" style="font-family: 'Press Start 2P', cursive; font-size:40px; margin-left:20px"> 
+          <a class="navbar-brand"  style="font-family: 'Press Start 2P', cursive; font-size:40px; margin-left:20px"> 
             RGCA </a>
           <form class="form-inline">
               <div class="input-group">
@@ -48,15 +48,17 @@
       <div class="col-md-8">
         <div id="carouselExampleControls" class="carousel slide" style="width: 600px; height:600px; margin: 0 auto" data-ride="carousel">
             <div class="carousel-inner">
+              {{!-- Need an "each" query to pull the games dynamically from the database, and the images from the database! --}}
               <div class="carousel-item active">
-                  <a href="https://tdolan21.github.io/JSgame/">  <img class="d-block w-100" src="/images/smb.jpg" alt="First slide">
+                  <a href="/games/id:frame1">  <img class="d-block w-100" src="/images/goldeneye.jpg" alt="007-GoldenEye">
                   </a> </div>
               <div class="carousel-item">
-                <a href="https://hordakai.github.io/train-assignment/"><img class="d-block w-100" src="/images/zelda.jpg" alt="Second slide">
+                <a href="/games/id:frame2"><img class="d-block w-100" src="/images/banjokazooie.jpg" alt="Banjokazooie">
               </div>
               <div class="carousel-item">
-                  <a href="https://hordakai.github.io/unit-4-game/"><img class="d-block w-100" src="/images/donkeykong.jpg" alt="Fourth slide">
-              </a> </div>
+                <a href="/games/id:frame3"><img class="d-block w-100" src="/images/pokemonstadium.jpg" alt="pokemonstadium">
+              </div>
+        
  
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -78,8 +80,8 @@
 <footer class="page-footer footer-expand-lg" style="background-color: #283747">
 
   <div class="footer-copyright text-center py-3" style="color:white;">RGCA © 2018
-    <a class="navbar-brand" href=https://linkedin.com/in/alexander-esch-37b69a62> <img src= "/images/linkedin.png" height="30px"></a>
-    <a class="navbar-brand" href=https://github.com/tdolan21> <img src= "/images/github.png" height="30px"></a>
+    <a class="navbar-brand" href="/linkedin"> <img src= "/images/linkedin.png" height="30px"></a>
+    <a class="navbar-brand" href="https://github.com/tdolan21/RGCA"> <img src= "/images/github.png" height="30px"></a>
       
   </div>
 </footer>
