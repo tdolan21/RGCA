@@ -23,11 +23,18 @@ module.exports = function(app) {
   app.get("/linkedin", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("linkedin", {
-        examples: dbExamples
+        example: dbExample
       });
     });
   });
 
+  app.get("/library", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+      res.render("library", {
+        example: dbExample
+      });
+    });
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
