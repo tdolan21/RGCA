@@ -3,10 +3,14 @@ CREATE DATABASE rgca_db;
 
 USE rgca_db;
 
-CREATE TABLE rgca_db (
-    id INT AUTO_INCREMENT NOT NULL,
-    user_name VARCHAR(255) NOT NULL,
-    devoured BOOLEAN DEFAULT false,
-    createdAt TIMESTAMP NOT NULL,
-    PRIMARY KEY(id) 
+CREATE TABLE games (
+  id INT AUTO_INCREMENT NOT NULL,
+  romLink VARCHAR(1000) NOT NULL,
+  title VARCHAR(200) NOT NULL,
+  rating VARCHAR(10),
+  imageLink VARCHAR(1000) NOT NULL,
+  
+ 
+  description VARCHAR(1000) NOT NULL,
+  PRIMARY KEY(id)
 );
