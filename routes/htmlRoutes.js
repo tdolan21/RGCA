@@ -14,8 +14,16 @@ module.exports = function(app) {
   // Load example page and pass in an example by id
   app.get("/games/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
+      res.render("player", {
         example: dbExample
+      });
+    });
+  });
+
+  app.get("/linkedin", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+      res.render("linkedin", {
+        examples: dbExamples
       });
     });
   });
